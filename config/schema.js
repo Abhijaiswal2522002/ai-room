@@ -7,3 +7,12 @@ export const Users=pgTable('user',{
     imageUrl:varchar('imageUrl').notNull(),
     credits:integer('credits').default(3)
 })
+
+export const AiGeneratedImage=pgTable('aiGeneratedImage',{
+    id:serial('id').primaryKey(),
+    roomType:varchar('roomType').notNull(),
+    designType:varchar('designType').notNull(),
+    orgImage:varchar('orgImage').notNull(),
+    aiImage:integer('aiImage').notNull(),
+    userEmail:varchar('userEmail')
+})
